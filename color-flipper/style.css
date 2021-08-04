@@ -1,0 +1,87 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1 rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-center {
+  width: auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+}
+
+nav a, h1{
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: black;
+  margin-right: 1rem;
+  transition: 600ms;
+}
+
+nav a:hover {
+  color: grey;
+}
+
+main {
+  min-height: calc(100vh - 3rem);
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  height: auto;
+}
+
+.color {
+  font-size: 5rem;
+  padding: 1rem;
+  margin-bottom: 2.5rem;
+  padding: 0.75rem 1.25rem;
+}
+
+.btn{
+  text-transform: uppercase;
+  background: transparent;
+  display: inline-block;
+  font-weight: 700;
+  border: 2px solid var(--clr-black);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  padding: 0.75rem 1.25rem;
+}
+
+
+.btn:hover{
+  border: 2px solid black;
+}
+
+
