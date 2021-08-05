@@ -1,0 +1,51 @@
+*, :before, :after{
+    background: rgb(170, 165, 165);
+}
+
+main{
+    min-height: 100vh;
+    display:grid;
+    place-items:center;
+    position:relative;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+    place-self: center;
+    position:relative;
+}
+
+.value{
+    font-size: 8rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-bottom: 5rem;
+}
+
+.button-container{
+    display:grid;
+    place-items:center;
+}
+
+.btn{
+    text-transform: uppercase;
+    background: transparent;
+    padding: 0.375rem 0.75rem;
+    display: inline-block;
+    font-size: 0.875rem;
+    border: 2px solid var(--clr-black);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 0.5rem;
+}
+
+.timer{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn:hover{
+    border: 2px solid black;
+}
