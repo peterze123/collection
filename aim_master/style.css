@@ -10,13 +10,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: crosshair;
   }
   
 header {
-    background-color: rgba(125, 127, 133, 0.658)
+    background-color: #282616;
 }
 
 .score-container {
+    color: #716F56;
     height: 4rem;
     display: flex;
     flex-direction: column;
@@ -34,7 +36,7 @@ hr {
 }   
 
 body{
-    background-color: rgba(150, 150, 150, 0.658);
+    background-color: #4E4B2C;
 }
 
 .target-container{
@@ -46,8 +48,57 @@ body{
     position: relative;
     transform: rotate(var(--degree));
 }
+.container{
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+    place-self: center;
+    position:relative;
+}
+
+.container h3{
+    font-size: 4rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 2rem 0rem 4rem;
+}
+
+.rounds{
+    font-size: 8rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-bottom: 3rem;
+}
+
+.button-container{
+    display:grid;
+    place-items:center;
+}
+
+.btn, .start, .reset{
+    text-transform: uppercase;
+    background: transparent;
+    padding: 0.375rem 0.75rem;
+    display: inline-block;
+    font-size: 0.875rem;
+    border: 2px solid var(--clr-black);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 0.5rem;
+}
+
+.btn:hover, .start:hover, .reset:hover{
+    border: 2px solid black;
+}
+
+#start{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
 
 #head {
+    background: rgb(235, 211, 150);
     flex: 1/2;
     width: 15%;
     height: 2rem;
@@ -56,7 +107,6 @@ body{
 }
 
 #body{
-    background: lightblue;
     flex:2/4;
     width: var(--width);
     height: var(--height);

@@ -3,7 +3,9 @@ const body = document.getElementById("body");
 const head = document.getElementById("head");
 const sec = document.getElementById("sec");
 const h_time = document.getElementById("h-time");
-const num_round = 30;
+const btn = document.querySelectorAll("btn");
+var num_round = parseInt(localStorage.getItem("rounds"));
+var total_time = 0;
 //
 var round = 0;
 var headshots = 0;
@@ -21,13 +23,16 @@ function random_color() {
 //
 function new_enemy(){
     if (round == num_round){
-        return;
+        let avg = (total_time/num_round).toFixed(2);
+        alert("your avg time took was: " + avg + "s");
+        localStorage.clear();
+        window.location.href = "./";
     }
     //
     let min = 0;
     let max = window.innerHeight - 200;
     let top = Math.floor(Math.random() * (max - min + 1)) + min;
-    max = window.innerWidth - 200;
+    max = window.innerWidth - 180;
     let left = Math.floor(Math.random() * (max - min + 1)) + min;
     //
     let dimension;
@@ -70,6 +75,7 @@ function make_char(){
             if (target.health <= 0){
                 eliminatedtime = Date.now();
                 reactiontime = (eliminatedtime - createdtime) / 1000;
+                total_time += reactiontime;
                 sec.innerHTML = reactiontime;
                 //
                 person.style.display = "none";
@@ -81,6 +87,7 @@ function make_char(){
     round++;
 }
 //
+console.log(num_round);
 make_char();
 //
 body.addEventListener("click", function(){

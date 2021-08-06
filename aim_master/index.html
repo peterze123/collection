@@ -8,6 +8,49 @@
     <title>Aim Master</title>
 </head>
 <body>
-    
+    <main>
+        <div class="container">
+            <h3 class="title">Number of Targets</h3>
+            <h4 class="rounds">0</h4>
+            <div class="button-container">
+                <div>
+                    <button class="btn" id=1>+1</button>
+                    <button class="btn" id=5>+5</button>
+                    <button class="btn" id=10>+10</button>
+                </div>
+                <div>
+                    <button class="reset" onclick = "reset()" >reset</button>
+                    <button class="start" onclick="storing()">start</a>
+                </div>
+                <script>
+                    const btn = document.querySelectorAll(".btn");
+                    const num = document.querySelector(".rounds");
+                    var rounds = 0; 
+                    btn.forEach(function(btn){
+                        btn.addEventListener('click', function(e){
+                            rounds += parseInt(e.currentTarget.id);
+                            num.innerHTML = rounds;
+                        });     
+                    });
+                    //
+                    function reset(){
+                        rounds = 0;
+                        num.innerHTML = rounds;
+                    }
+                    //
+                    function storing(){
+                        if(rounds == 0){
+                            window.location.href = "./";
+                            alert("enter the number of rounds")
+                        }
+                        else{
+                            localStorage.setItem("rounds", num.innerHTML);
+                            window.location.href = "./game.html";
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
