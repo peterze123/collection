@@ -15,8 +15,8 @@ var reactiontime;
 var avg_reactiontime;
 //
 function random_color() {
-    var o = Math.round, r = Math.random, s = 255;
-    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+    let s = 255;
+    return 'rgba(' + Math.round(Math.random()*s) + ',' + Math.round(Math.random()*s) + ',' + Math.round(Math.random()*s) + ',' + Math.round(Math.random()*s) + ')';
 }
 //
 function new_enemy(){
@@ -49,10 +49,10 @@ function new_enemy(){
     let rad = Math.floor(Math.random() * (50 - 0 + 1)) + 0;
     person.style.setProperty("--radius", rad + "%");
     //
-    let width = Math.floor(Math.random() * (40 - 20 + 1)) + 20;
+    let width = Math.floor(Math.random() * (50 - 20 + 1)) + 20;
     person.style.setProperty("--width", width + "%");
     //
-    let height = Math.floor(Math.random() * (7 - 3 + 1)) + 3;
+    let height = Math.floor(Math.random() * (6 - 3 + 1)) + 3;
     person.style.setProperty("--height", height + "rem");
     //
     let time = Math.random()*2000;
