@@ -1,0 +1,134 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(78,75,44);
+}
+
+#menu{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif；
+}
+
+#logo{
+    color:grey;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+#run{
+    width: 3.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+}
+
+.btn{
+    background: whitesmoke;
+    display: inline-block;
+    font-size: 0.875rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn span{
+    transition: 0.5s;
+}
+
+.btn span::after{
+    content: '>';
+    opacity: 0;
+}
+
+.btn:hover span{
+    padding-left: 1rem;
+}
+
+.btn:hover span::after{
+    opacity: 1;
+}
+
+.btn:hover{
+    background-color: #78866B;
+}
+
+.menu-container{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.clear{
+    clear:both;
+}
+
+ul{
+    padding: 0;
+}
+
+#accordion{
+    background-color:rgb(78,75,44);
+    width: 100%;
+    height: 516px;
+    top: -20px;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+#accordion div, #accordion h3{
+    display: inline-block;
+    text-align: center;
+}
+
+.editor{
+    margin-top: -20px;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: #78866B;
+    width: 100%;
+    height: 1.5rem;
+}
+
+.code-container{
+    position: sticky;
+    margin-top: -1rem;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+textarea{
+    height: 25.7rem;
+    width: 100%;
+    color: rgb(136, 135, 135);
+    background-color: black;
+    border: none;
+    resize: none;
+}
+
+
+#result-container{
+    position: relative;
+    margin-top: -37px;
+    min-height: 100%;
+    width: 100%;
+}
+
+iframe{
+    border: none;
+    border-top: 5px solid #78866B;
+    width: 100%;
+    min-height: 100%;
+}

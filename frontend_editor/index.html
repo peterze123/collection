@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Runner</title>
+    <link rel="stylesheet" href='style.css'>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+</head>
+<body>
+    <div id="menu">
+        <div class="menu-container">
+            <div id="logo" contenteditable="true">Your Project</div>
+            <button class="btn" id="run"><span>>></span></button>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <ul id='accordion'>
+        <h3 id='html-tab' class='editor'>HTML</h3>
+        <div class='code-container'>
+            <textarea id='html-code'></textarea>
+        </div>
+        <h3 id='css-tab'  class='editor'>CSS</h3>
+        <div class='code-container'>
+            <textarea id='css-code'></textarea>
+        </div>
+        <h3 id='js-tab'  class='editor'>JS</h3>
+        <div class='code-container'>
+            <textarea id='js-code'></textarea>
+        </div>
+    </ul>
+    <div id='result-container'>
+        <div class="clear"></div>
+        <iframe id='result-frame'></iframe>
+    </div>
+</body>
+<script src='app.js'></script>
+</html>
