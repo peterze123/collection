@@ -73,12 +73,21 @@ label{
     border: 2px solid black;
 }
 
-#error{
-    color:red;
+.form-error{
+    color: red;
 }
 
-.warning{
-    display:show;
-    padding-left: 1rem;
-    font-size:1rem;
+.success{
+    color: green;
+}
+
+#error{
+    display: block;
+    height: 2rem;
+    width: 100%;
+}
+
+.input-error{
+    border: 1px solid red;
+    box-shadow: 0 0 5px red;
 }

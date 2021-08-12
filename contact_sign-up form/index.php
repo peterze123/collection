@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="container">
-        <form action="" method="post" id="validation">
+        <form method="post" id="validation">
             <label for="full-name">Name</label>
             <input type="text" name="name" id="full-name" class="in" placeholder="your full name">
 
@@ -33,12 +33,11 @@
 
             <textarea id="mail-message" name="message" rows='8'cols='80' placeholder="enter your message"></textarea>
 
-            <button id = "submit" type="submit" name="submite">OK</button>
-
-            <div id = error></div>
+            <button id = "submit" type="submit" name="submit">OK</button>
+            <div id = "error"></div>
         </form>
     </div>  
-    <script>
+    <script type='text/javascript'>
         $('#validation').submit(function(e){
             //remove after implementation
             e.preventDefault();
@@ -49,33 +48,16 @@
             var pass1 = $('#pass1').val();
             var pass2 = $('#pass2').val();
             var message = $('#mail-message').val();
-            var error = $('#error');
-            var emailReg = /^\b[A-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[A-Z0-9.-]+\.com\b/i;
-            var passReg = /(?=.{6,})/i;
-            var errorMessage;
+            var submit = $('#submit').val();
             //
-            if (name == '' || email == '' || pass1 == ''){
-                errorMessage = 'please enter into the required fields'
-            }
-            //
-            else if (!emailReg.test(email)){
-                errorMessage = 'please enter a valid email';
-            }
-            else if (!passReg.test(pass1)){
-                errorMessage ='please enter a password greater than 6 characters';
-            }
-            else if (pass1 != pass2){
-                errorMessage ='please reconfirm your password';
-            }
-
-            if (errorMessage){
-                error.html(errorMessage);
-                error.css('color','red');
-            }
-            else{
-                error.html('Success!');
-                error.css('color','green');
-            }
+            $("#error").load("mail.php",{
+                name: name,
+                email: email,
+                pass1: pass1,
+                pass2: pass2,
+                message: message,
+                submit: submit,
+            });
         });
     </script>
 </body>
