@@ -17,7 +17,7 @@
         <div class="container">
             <h1 id = "title" class="display-4 text-light mt-3">Your Weather App</h1>
             <div class='result-container'>
-                <h1 id = 'temp-container'><span id='temp'></span>°F<h1>
+                <h1 id = 'temp-container'><span id='temp'></span>°C<h1>
                 <div id = "found" class="alert col-md-12 mx-auto"></div>
             </div>
             <p id = "ques" class="lead text-light">Enter Your City</p>
@@ -37,6 +37,8 @@
 </body>
 <script type="text/javascript">
     $("#btn").click(function(e){
+        $('#found').fadeOut();
+        $("temp-container").fadeOut();
         e.preventDefault();
         if($("#city").val() == ""){
             $("#no-input").fadeIn();
@@ -48,8 +50,9 @@
                 }
                 else{
                     temp = text.substring(text.lastIndexOf(".") + 1, text.length+1);
-                    console.log(temp);
                     $("#title").html($("#city").val());
+                    $("#temp").html(temp);
+                    $("#temp-container").fadeIn();
                     $("#found").html(text.substring(0, text.lastIndexOf(".") + 1)).fadeIn();
                 }
             });
