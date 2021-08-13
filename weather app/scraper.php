@@ -1,6 +1,7 @@
 <?php
     $input = $_GET["city"];
-    $key = "7ff477563d70270cdb86ffe033ca637d";
+    //enter the token
+    $key = "";
     $input = ucwords($input);
     //
     $weather = @file_get_contents("https://www.weather-forecast.com/locations/". str_replace(" ", "-", $input)."/forecasts/latest");
