@@ -51,8 +51,10 @@ h2{
  .card-img-top{
      min-width: 50vh;
      height: 40vh;
+     cursor: pointer;
  }
 
  .card-img{
     height: 40vh;
+    cursor: pointer;
  }
