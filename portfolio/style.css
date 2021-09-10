@@ -8,6 +8,10 @@ body{
     min-height: 30vh
 }
 
+.container{
+    place-content: center;
+}
+
 h1{
     font-size:3rem;
     color: white;
@@ -57,4 +61,18 @@ h2{
  .card-img{
     height: 40vh;
     cursor: pointer;
+ }
+
+ #pc{
+    background-color: transparent;
+    border:transparent
+ }
+
+ #p{
+     min-width: 50vh;
+     height: 60vh;
+     margin-bottom: 1.5rem;
+ }
+ #text{
+     color: whitesmoke;
  }
